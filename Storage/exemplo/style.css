@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+h1 {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+h2 {
+    margin-top: 30px;
+    border-bottom: 2px solid #ccc;
+}
+
+.caixa {
+    background-color: white;
+    border: 2px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.container-tag {
+    background-color: lightblue;
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.texto {
+    color: blue;
+    font-weight: bold;
+}
+
+.paises {
+    color: darkgreen;
+    margin: 5px 0;
+}
+
+input {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    width: 250px;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+}
+
+.row {
+    background-color: lightyellow;
+    border: 3px dashed orange;
+    padding: 15px;
+}
+
+.card-produto {
+    background-color: white;
+    border: 1px solid #999;
+    padding: 10px;
+    margin: 10px 0;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="topo">
+        <h1 id="titulo">Aula de DOM</h1>
+        <p>Abra o Console do navegador com <strong>F12</strong> para acompanhar os exemplos.</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>1. Acesso pelo document</h2>
+            <p>Use o botão para exibir <code>document</code>, <code>document.head</code> e <code>document.body</code> no
+                console.</p>
+            <button id="btn-document">Mostrar document no console</button>
+        </section>
+
+        <section class="card">
+            <h2>2. getElementById</h2>
+            <div id="app" class="caixa">
+                <p id="paragrafo1">Olá, Mundo</p>
+            </div>
+            <button id="btn-id">Buscar por ID</button>
+        </section>
+
+        <section class="card">
+            <h2>3. getElementsByClassName</h2>
+            <ul>
+                <li class="paises">AR</li>
+                <li class="paises">CL</li>
+                <li class="paises">UY</li>
+            </ul>
+            <button id="btn-classe">Buscar por classe</button>
+        </section>
+
+        <section class="card">
+            <h2>4. getElementsByTagName</h2>
+            <div id="grupo-divs" class="caixa">
+                <div>container 2</div>
+                <div>container 3</div>
+            </div>
+            <button id="btn-tag">Buscar por tag div</button>
+        </section>
+
+        <section class="card" id="container-query">
+            <h2>5. querySelector</h2>
+            <p class="texto">Este parágrafo tem a classe texto.</p>
+            <label><input class="radio" type="radio" name="opcao" value="A"> Opção A</label>
+            <label><input class="radio" type="radio" name="opcao" value="B" checked> Opção B marcada</label>
+            <button id="btn-query">Testar querySelector</button>
+        </section>
+
+        <section class="card">
+            <h2>6. For...of em HTMLCollection</h2>
+            <p>Percorre elementos encontrados por classe e tag.</p>
+            <button id="btn-forof">Percorrer coleções</button>
+        </section>
+
+        <section class="card">
+            <h2>7. innerText</h2>
+            <h3 id="titulo-innertext">Olá, Mundo!</h3>
+            <button id="btn-innertext">Alterar texto</button>
+        </section>
+
+        <section class="card">
+            <h2>8. innerHTML</h2>
+            <div id="container-html" class="resultado"></div>
+            <button id="btn-innerhtml">Inserir HTML</button>
+        </section>
+
+        <section class="card">
+            <h2>9. innerText vs innerHTML</h2>
+            <p id="paragrafo-completo">
+                <span style="display: none">Hakuna</span>
+                <strong>Matata</strong>
+                <span style="visibility: hidden;">Mundo</span>
+                <span>JS</span>
+            </p>
+            <button id="btn-comparar">Comparar no console</button>
+        </section>
+
+        <section class="card">
+            <h2>10. className</h2>
+            <div id="container-classe" class="resultado">Este container terá sua classe alterada.</div>
+            <button id="btn-classname">Aplicar classe row</button>
+        </section>
+
+        <section class="card">
+            <h2>11. createElement() e append()</h2>
+            <div id="area-append" class="resultado"></div>
+            <button id="btn-create">Criar parágrafo</button>
+        </section>
+
+        <section class="card">
+            <h2>12. remove()</h2>
+            <p id="paragrafo-remover">Este parágrafo será removido.</p>
+            <ul>
+                <li class="remover-pais">BR</li>
+                <li class="remover-pais">PY</li>
+            </ul>
+            <button id="btn-remove-paragrafo">Remover parágrafo</button>
+            <button id="btn-remove-pais">Remover primeiro país</button>
+        </section>
+
+        <section class="card">
+            <h2>13. Inputs e propriedade value</h2>
+            <input id="nome" type="text" placeholder="Nome">
+            <input id="idade" type="number" placeholder="Idade">
+            <input id="entrada-valor" type="text" placeholder="Digite algo">
+            <button id="btn-preencher">Preencher nome e idade</button>
+            <button id="btn-ler-input">Ler entrada</button>
+        </section>
+
+        <section class="card">
+            <h2>14. Lista a partir de array</h2>
+            <ul id="pessoas"></ul>
+            <button id="btn-array">Gerar lista de pessoas</button>
+        </section>
+
+        <section class="card">
+            <h2>15. Elementos a partir de objetos</h2>
+            <div id="produtos-container" class="grid-produtos"></div>
+            <button id="btn-objetos">Gerar produtos</button>
+        </section>
+
+        <section class="card">
+            <h2>16, 17 e 18. Eventos de clique</h2>
+            <button id="botao1">Clique Aqui 1 - addEventListener</button>
+            <button id="botao2">Clique Aqui 2 - onclick</button>
+            <button onclick="funcaoOpcao3()">Clique Aqui 3 - inline</button>
+        </section>
+
+        <section class="card">
+            <h2>19. Submit com preventDefault()</h2>
+            <form id="formulario">
+                <input type="text" placeholder="Produto">
+                <input type="number" placeholder="Quantidade">
+                <button type="submit">Enviar formulário</button>
+            </form>
+            <p id="resultado-formulario" class="mensagem"></p>
+        </section>
+
+        <section class="card destaque">
+            <h2>20 e 21. Mini projeto: Lista de tarefas</h2>
+            <input type="text" name="entrada" id="entrada" placeholder="Digite uma tarefa">
+            <button id="enviar">Enviar</button>
+            <button id="visualizar">Visualizar</button>
+            <button id="limpar">Limpar</button>
+            <ul id="resultado"></ul>
+        </section>
+
+        <section class="card">
+            <h2>22. Acessando elementos e salvando em array</h2>
+            <ul>
+                <li class="produto">Mouse</li>
+                <li class="produto">Teclado</li>
+                <li class="produto">Monitor</li>
+                <li class="produto">Fone</li>
+                <li class="produto">Notebook</li>
+            </ul>
+            <button id="btn-produtos-array">Criar array de produtos</button>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
