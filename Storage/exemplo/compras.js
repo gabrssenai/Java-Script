@@ -1,97 +1,88 @@
 let listaCompras = [];
-
 let entradaCompras = document.getElementById("entradaCompras");
-let botaoSalvar = document.getElementById("salvar");
-let botaoVisualizar = document.getElementById("visualizar");
-let botaoLimpar = document.getElementById("limpar");
-let resultado = document.getElementById("resultado");
+let listaAtual = document.getElementById("listaAtual");
 
-function carregarLista() {
+function carregarLista(){
     let itensSalvos = localStorage.getItem("listaCompras");
-
-    if (itensSalvos !== null) {
+    if(itensSalvos !== null){
         listaCompras = JSON.parse(itensSalvos);
     }
 }
 
-function atualizarLocalStorage() {
+function atualizarLocalStorage(){
     localStorage.setItem("listaCompras", JSON.stringify(listaCompras));
 }
 
-function salvarItem() {
+// ==============
+// BOTÃO SALVAR =
+// ==============
+let botaoSalvar = document.getElementById("salvar");
+
+botaoSalvar.addEventListener("click",acaoSalvar);
+
+function acaoSalvar(){
     let item = entradaCompras.value;
-
-    if (item === "") {
-        alert("Digite um item");
+    if(item === ""){
+        alert("Digite um item antes");
         return;
     }
-
-    carregarLista();
-
     listaCompras.push(item);
-
     atualizarLocalStorage();
-
     entradaCompras.value = "";
-
-    visualizarItens();
+    acaoVisualizar();
 }
 
-function visualizarItens() {
-    resultado.innerHTML = "";
+// ==================
+// BOTÃO VISUALIZAR =
+// ==================
+let botaoVisualizar = document.getElementById("visualizar");
 
+botaoVisualizar.addEventListener("click", acaoVisualizar);
+
+function acaoVisualizar(){
+    listaAtual.innerHTML = '';
     carregarLista();
-
-    if (listaCompras.length === 0) {
-        resultado.innerHTML = "<li>Nenhum item salvo</li>";
-        return;
+    if(listaCompras.length === 0){
+        listaAtual.innerHTML = "<li>Nenhum item adicionado</li>"
+        return
     }
-
-    for (let i = 0; i < listaCompras.length; i++) {
-        resultado.innerHTML += `
-            <li>
-                ${listaCompras[i]}
-                <button onclick="editarItem(${i})">Editar</button>
-                <button onclick="excluirItem(${i})">Excluir</button>
+    for(let i = 0; i < listaCompras.length; i++){
+        listaAtual.innerHTML = listaAtual.innerHTML + `
+            <li> ${listaCompras[i]} 
+                <button onclick = "editarItem(${i})">Editar</button>
+                <button onclick = "excluirItem(${i})">Excluir</button>
             </li>
-        `;
-    }
+        `}
 }
 
-function editarItem(indice) {
-    let novoItem = prompt("Digite o novo nome do item:");
-
-    if (novoItem === null || novoItem === "") {
-        return;
+function editarItem(indice){
+    let novoItem = prompt("Digite um novo item");
+    if(novoItem === null || novoItem === ''){
+        return
     }
-
     carregarLista();
-
     listaCompras[indice] = novoItem;
-
     atualizarLocalStorage();
-
-    visualizarItens();
+    acaoVisualizar();
 }
 
-function excluirItem(indice) {
+function excluirItem(indice){
     carregarLista();
-
-    listaCompras.splice(indice, 1);
-
+    listaCompras.splice(indice,1);
     atualizarLocalStorage();
-
-    visualizarItens();
+    acaoVisualizar();
 }
 
-function limparLista() {
+// ==============
+// BOTÃO LIMPAR =
+// ==============
+let botaoLimpar = document.getElementById("limpar");
+
+botaoLimpar.addEventListener("click", acaoLimpar);
+
+function acaoLimpar(){
     localStorage.removeItem("listaCompras");
-
     listaCompras = [];
-
-    resultado.innerHTML = "";
+    listaAtual.innerHTML = '';
 }
 
-botaoSalvar.addEventListener("click", salvarItem);
-botaoVisualizar.addEventListener("click", visualizarItens);
-botaoLimpar.addEventListener("click", limparLista);

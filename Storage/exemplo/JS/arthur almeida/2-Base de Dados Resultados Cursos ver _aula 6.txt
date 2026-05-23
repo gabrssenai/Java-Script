@@ -1,0 +1,43 @@
+Tipo do Treinamento	Curso	Matriculas	Resultado de Arrecadação R$	Meta de Arrecadação R$	Cidade	Ano
+Aperfeiçoamento	Culinária	132	63360	51000	Cotia	2017
+Especialização	Panificação	98	37240	42000	Osasco	2017
+Iniciação	Informática	173	134940	105000	São Caetano do Sul	2017
+Qualificação	Automação	50	52500	83000	São Paulo	2017
+Especialização	Gestão de Pessoas	140	71400	51000	Barueri	2017
+Qualificação	Instalação de Redes de Computadores	92	57960	62000	Marília	2017
+Aperfeiçoamento	Eletrônica	45	49500	48500	Americana	2017
+Especialização	Panificação	64	24320	44000	Campinas	2017
+Qualificação	Instalação de Redes de Computadores	48	30240	35500	Arúja	2017
+Qualificação	Automação	95	99750	110000	Bauru	2017
+Aperfeiçoamento	Culinária	49	22050	20500	Santos	2017
+Especialização	Power BI	75	71250	51500	Santo André	2017
+Aperfeiçoamento	Eletrônica	50	55000	50000	Botucatu	2017
+Qualificação	Panificação	35	13300	14000	Cabreuva	2017
+Iniciação	Panificação	89	33820	29000	Cajamar	2017
+Qualificação	Automação	48	50400	52500	Embu	2017
+Iniciação	Informática	87	67860	42000	Cajuru	2017
+Especialização	Gestão de Pessoas	103	52530	45500	Guarulhos	2017
+Qualificação	Instalação de Redes de Computadores	62	39060	52400	Campos do Jordão	2017
+Iniciação	Informática	101	78780	75300	Jaú	2017
+Especialização	Power BI	62	58900	53200	Hortolândia	2017
+Aperfeiçoamento	Culinária	138	69854,4	56610	Cotia	2018
+Especialização	Panificação	102	51861,6	46620	Osasco	2018
+Iniciação	Informática	181	91551,6	116550	São Caetano do Sul	2018
+Qualificação	Automação	52	26460	92130	São Paulo	2018
+Especialização	Gestão de Pessoas	110	55440	56610	Barueri	2018
+Qualificação	Instalação de Redes de Computadores	96	48686,4	68820	Marília	2018
+Aperfeiçoamento	Eletrônica	47	23814	53835	Americana	2018
+Especialização	Panificação	67	33868,8	48840	Campinas	2018
+Qualificação	Instalação de Redes de Computadores	50	25401,6	39405	Arúja	2018
+Qualificação	Automação	99	50274	122100	Bauru	2018
+Aperfeiçoamento	Culinária	51	25930,8	22755	Santos	2018
+Especialização	Power BI	86	43344	57165	Santo André	2018
+Aperfeiçoamento	Eletrônica	52	26460	55500	Botucatu	2018
+Qualificação	Panificação	36	18522	15540	Cabreuva	2018
+Iniciação	Panificação	93	47098,8	32190	Cajamar	2018
+Qualificação	Automação	50	25401,6	58275	Embu	2018
+Iniciação	Informática	139	70056	46620	Cajuru	2018
+Especialização	Gestão de Pessoas	108	54507,6	50505	Guarulhos	2018
+Qualificação	Instalação de Redes de Computadores	65	32810,4	58164	Campos do Jordão	2018
+Iniciação	Informática	106	53449,2	83583	Jaú	2018
+Especialização	Power BI	65	32810,4	59052	Hortolândia	2018
